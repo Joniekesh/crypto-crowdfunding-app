@@ -1,0 +1,256 @@
+@import "../../styles/globals.scss";
+
+.singleCampaign {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	gap: 36px;
+	background-color: white;
+	width: 90%;
+	height: max-content;
+	margin-left: 50px;
+	// margin-top: 100px;
+	border-radius: 10px;
+	padding: 10px;
+
+	@include responsive768 {
+		margin-left: unset;
+		width: 100%;
+		border-radius: unset;
+		// margin-top: unset;
+	}
+
+	@include mobile {
+		margin-top: 350px;
+	}
+
+	.top {
+		width: 100%;
+		height: 220px;
+		display: flex;
+		gap: 10px;
+
+		@include mobile {
+			flex-direction: column;
+			width: 100%;
+			height: max-content;
+		}
+
+		.topLeft {
+			flex: 8;
+			display: flex;
+			flex-direction: column;
+
+			img {
+				width: 100%;
+				height: 100%;
+				border-radius: 10px;
+				object-fit: cover;
+
+				@include mobile {
+					height: 300px;
+				}
+			}
+
+			.outerBar {
+				width: 100%;
+				height: 12px;
+				background-color: #6d6d6d;
+				border-radius: 16px;
+				margin-top: 4px;
+
+				.innerBar {
+					height: 100%;
+					background-color: green;
+					border-radius: 16px;
+					color: white;
+					display: flex;
+					align-items: center;
+				}
+			}
+		}
+
+		.topRight {
+			flex: 1;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			align-items: center;
+			height: 100%;
+			background-color: lightgray;
+			padding: 10px;
+
+			.item {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
+				font-size: 12px;
+				background-color: darkgray;
+				color: #04172c;
+				padding: 4px;
+				border-radius: 6px;
+				font-weight: bold;
+
+				@include mobile {
+					width: 100%;
+					justify-content: unset;
+					margin: 6px;
+				}
+			}
+		}
+	}
+
+	.bottom {
+		width: 100%;
+		height: max-content;
+		display: flex;
+		justify-content: space-between;
+		background-color: rgb(212, 238, 255);
+		padding: 10px;
+		gap: 10px;
+
+		@include mobile {
+			flex-direction: column-reverse;
+			margin-top: -30px;
+		}
+
+		.bottomLeft {
+			height: 100%;
+			flex: 3;
+			display: flex;
+			flex-direction: column;
+			gap: 50px;
+
+			@include mobile {
+				gap: 20px;
+			}
+
+			.creatorInfo {
+				display: flex;
+				flex-direction: column;
+
+				.creator {
+					font-weight: bold;
+					margin-bottom: 8px;
+				}
+				.creatorAdrress {
+					display: flex;
+					align-items: center;
+					gap: 6px;
+
+					img {
+						width: 32px;
+						height: 32px;
+						border-radius: 50%;
+						object-fit: cover;
+					}
+
+					.cryptoAddress {
+						font-weight: bold;
+					}
+				}
+			}
+
+			.blItem {
+				display: flex;
+				flex-direction: column;
+
+				.desc {
+					font-weight: bold;
+				}
+			}
+
+			.donators {
+				display: flex;
+				flex-direction: column;
+
+				.donatorTitle {
+					font-weight: bold;
+				}
+
+				.list {
+					display: flex;
+					flex-direction: column;
+					gap: 4px;
+
+					.listItem {
+						display: flex;
+						align-items: center;
+						justify-content: space-between;
+						font-size: 13px;
+						font-weight: 500;
+						background-color: #04172c;
+						color: white;
+						padding: 4px;
+						border-radius: 10px;
+
+						.listItemLeft {
+							.sNo {
+								margin-right: 6px;
+							}
+						}
+					}
+				}
+			}
+		}
+
+		.bottomRight {
+			width: 100%;
+			height: max-content;
+			flex: 1;
+			display: flex;
+			flex-direction: column;
+			gap: 10px;
+			padding: 10px;
+			border-radius: 10px;
+			background-color: rgb(153, 212, 252);
+
+			@include responsive768 {
+				gap: unset;
+			}
+
+			span {
+				opacity: 0.8;
+			}
+
+			form {
+				display: flex;
+				flex-direction: column;
+				gap: 8px;
+
+				input {
+					width: 100%;
+					font-size: 14px;
+					padding: 4px;
+				}
+
+				.backUp {
+					display: flex;
+					flex-direction: column;
+					gap: 6px;
+					text-align: center;
+
+					.desc1 {
+						font-weight: bold;
+					}
+				}
+
+				button {
+					cursor: pointer;
+					padding: 8px;
+					background-color: #04172c;
+					color: white;
+					border: none;
+					border-radius: 6px;
+					font-weight: 600;
+					transition: all 0.5s ease-in-out;
+
+					&:hover {
+						transform: scale(1.02);
+					}
+				}
+			}
+		}
+	}
+}

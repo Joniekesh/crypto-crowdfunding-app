@@ -1,6 +1,6 @@
 # crypto-crowdfunding-app
 
- This is a secured ethereum smart contract based crowdfunding application where users can create or donate to Campaigns. All transactions are permanently saved in Ethereum network.
+ This is a secured ethereum smart contract based crowdfunding application where users can create or donate to Campaigns. All transactions are permanently saved in Ethereum network. You have to install Metamask on any of your applicable browser or download from Appstore if you are using Android in order to create or donate to a Campaign. 
 # URL:https://crypto-crowdfunding.netlify.app/
 # Key Technologies Used
 1. React.

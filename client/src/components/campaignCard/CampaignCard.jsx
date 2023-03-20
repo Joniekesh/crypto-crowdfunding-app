@@ -15,8 +15,18 @@ const CampaignCard = ({ campaign }) => {
 				<img className="topImg" src={campaign.img} alt="" />
 			</div>
 			<div className="bottom">
-				<p className="title">{campaign.title}</p>
-				<span className="description">{campaign.description}</span>
+				{campaign?.title.length < 30 ? (
+					<p className="title">{campaign.title}</p>
+				) : (
+					<p className="title">{campaign.title.slice(0, 30)}...</p>
+				)}
+				{campaign.description < 30 ? (
+					<span className="description">{campaign.description}</span>
+				) : (
+					<span className="description">
+						{campaign.description.slice(0, 30)}...
+					</span>
+				)}
 				<div className="reception">
 					<div className="receptionLeft">
 						<span>{campaign.amountCollected} ETH</span>
